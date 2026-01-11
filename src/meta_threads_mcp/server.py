@@ -63,8 +63,9 @@ mcp.prompt()(analyze_engagement)
 def main() -> None:
     """Run the MCP server."""
     import sys
+    from typing import Literal
 
-    transport = "stdio"
+    transport: Literal["stdio", "sse", "streamable-http"] = "stdio"
     if "--sse" in sys.argv:
         transport = "sse"
     elif "--http" in sys.argv:
