@@ -7,7 +7,7 @@
   "environment": {
     "python": "3.12",
     "dependencies": [
-      "meta-threads-sdk>=0.2.0",
+      "meta-threads-sdk>=0.2.1",
       "fastmcp>=2.0.0"
     ]
   }
