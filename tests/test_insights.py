@@ -10,8 +10,6 @@ from meta_threads_mcp.tools.insights import (
 )
 
 
-
-
 @pytest.fixture
 def mock_media_insights() -> MagicMock:
     """Create mock media insights."""

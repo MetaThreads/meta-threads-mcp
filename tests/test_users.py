@@ -7,8 +7,6 @@ import pytest
 from meta_threads_mcp.tools.users import threads_get_profile
 
 
-
-
 @pytest.fixture
 def mock_profile() -> MagicMock:
     """Create a mock user profile."""
