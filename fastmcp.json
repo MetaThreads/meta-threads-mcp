@@ -5,7 +5,7 @@
     "entrypoint": "mcp"
   },
   "environment": {
-    "python": "3.13",
+    "python": "3.12",
     "dependencies": [
       "meta-threads-sdk>=0.2.0",
       "fastmcp>=2.0.0"
