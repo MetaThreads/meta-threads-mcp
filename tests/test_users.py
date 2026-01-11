@@ -43,7 +43,9 @@ class TestGetProfile:
             assert result["data"]["username"] == "testuser"
             assert result["data"]["name"] == "Test User"
             assert result["data"]["biography"] == "Hello, I'm a test user!"
-            assert result["data"]["profile_picture_url"] == "https://example.com/pic.jpg"
+            assert (
+                result["data"]["profile_picture_url"] == "https://example.com/pic.jpg"
+            )
             assert result["data"]["follower_count"] == 1000
             assert result["data"]["following_count"] == 500
 

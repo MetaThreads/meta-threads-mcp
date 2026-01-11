@@ -26,8 +26,6 @@ def mock_reply() -> MagicMock:
     return reply
 
 
-
-
 class TestReplyToPost:
     """Tests for threads_reply_to_post."""
 
@@ -68,9 +66,7 @@ class TestReplyToPost:
                 side_effect=Exception("Reply limit reached")
             )
 
-            result = await threads_reply_to_post(
-                mock_context, "post_123", "My reply"
-            )
+            result = await threads_reply_to_post(mock_context, "post_123", "My reply")
 
             assert result["success"] is False
             assert "Reply limit reached" in result["error"]
@@ -270,9 +266,7 @@ class TestUnhideReply:
         ) as mock_client_cls:
             client = AsyncMock()
             mock_client_cls.return_value.__aenter__.return_value = client
-            client.replies.unhide = AsyncMock(
-                side_effect=Exception("Reply not found")
-            )
+            client.replies.unhide = AsyncMock(side_effect=Exception("Reply not found"))
 
             result = await threads_unhide_reply(mock_context, "reply_456")
 

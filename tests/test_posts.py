@@ -28,8 +28,6 @@ def mock_post() -> MagicMock:
     return post
 
 
-
-
 class TestCreatePost:
     """Tests for threads_create_post."""
 

@@ -28,7 +28,9 @@ class TestGetCredentialsFromHeader:
     def test_valid_header(self) -> None:
         """Test parsing a valid bearer token from header."""
         with patch("meta_threads_mcp.auth.get_http_headers") as mock_headers:
-            mock_headers.return_value = {"authorization": "Bearer access_token_123:user_456"}
+            mock_headers.return_value = {
+                "authorization": "Bearer access_token_123:user_456"
+            }
             ctx = MagicMock()
 
             creds = get_credentials(ctx)
@@ -39,7 +41,9 @@ class TestGetCredentialsFromHeader:
     def test_token_with_colon_in_user_id(self) -> None:
         """Test parsing token where user_id contains colons."""
         with patch("meta_threads_mcp.auth.get_http_headers") as mock_headers:
-            mock_headers.return_value = {"authorization": "Bearer token:user:with:colons"}
+            mock_headers.return_value = {
+                "authorization": "Bearer token:user:with:colons"
+            }
             ctx = MagicMock()
 
             creds = get_credentials(ctx)
@@ -56,7 +60,9 @@ class TestGetCredentialsFromHeader:
                 {"THREADS_ACCESS_TOKEN": "env_token", "THREADS_USER_ID": "env_user"},
             ),
         ):
-            mock_headers.return_value = {"authorization": "Bearer header_token:header_user"}
+            mock_headers.return_value = {
+                "authorization": "Bearer header_token:header_user"
+            }
             ctx = MagicMock()
 
             creds = get_credentials(ctx)

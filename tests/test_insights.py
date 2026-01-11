@@ -26,7 +26,9 @@ def mock_media_insights() -> MagicMock:
 def mock_user_insights() -> MagicMock:
     """Create mock user insights."""
     insights = MagicMock()
-    insights.get_metric = MagicMock(side_effect=lambda m: {"views": 50000, "followers_count": 10000}.get(m))
+    insights.get_metric = MagicMock(
+        side_effect=lambda m: {"views": 50000, "followers_count": 10000}.get(m)
+    )
     return insights
 
 
