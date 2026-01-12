@@ -27,6 +27,16 @@ Or with uv:
 uv add meta-threads-mcp
 ```
 
+## Running on FastMCP Cloud
+
+The easiest way to run this MCP server is to deploy it on [FastMCP Cloud](https://fastmcp.cloud):
+
+1. Go to [fastmcp.cloud](https://fastmcp.cloud) and sign in
+2. Connect your GitHub repository
+3. FastMCP Cloud will automatically detect the `fastmcp.json` configuration and deploy your server
+
+![FastMCP Cloud](assets/FastMcpCloud.png)
+
 ## Configuration
 
 ### Claude Desktop
